@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</head><style>
+    img{
+        width: 100%;
+    }
+   .navbar{
+    margin: 10px;
+    padding: 10px;
+  }
+  #position{
+    text-align: center;
+    background-color: rgb(11, 1, 1);
+    font-weight: bold;
+    color: rgb(212, 228, 240);
+    margin: auto ;
+    width: 55%;
+    height: 55%;
+    padding: 160px;
+    border-radius: 16px ;
+    opacity: 0.46;
+    position: relative;
+    bottom: 640px;
+    left: 9px;
+  }
+  #c{
+    position: relative;
+    bottom: 400px;
+    text-align: center;}
+   #titre{
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+    bottom: 400px;
+    margin: 60px;
+  }
+  #texte{
+    font-size: 20px; text-align: center; padding: 5px;
+    font-weight: bold;
+  }
+  #titre2{
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+    bottom: 400px;
+    margin: 60px;
+  }
+  #texte2{
+    font-size: 20px; text-align: center; padding: 5px;
+    font-weight: bold;
+  }
+  #titre3{
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+    bottom: 400px;
+    margin: 60px;
+  }
+  #texte3{
+    font-size: 20px; text-align: center; padding: 5px;
+    font-weight: bold;
+  }
+  #all{
+    position: relative;
+    right: 330px;
+    background-color: rgb(222, 106, 11);
+    border-radius: 10px;
+    font-weight: bold;
+    
+  }
+  .container{
+    margin: 0 auto;
+    position: relative;
+    left: 199px;
+  }
+  </style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+              <a class="nav-link" href="#" id="courses">Courses</a>
+              <a class="nav-link" href="#" id="about">About</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+      <img src="f.png">
+      <div id="position">
+        <h1 style="font-size: 30px;font-weight: bold;">EAT(),SLEEP(),STUDY(),CODE()</h1>
+      <p style="font-size: 30px;">While you are alive</p>
+      <button type="submit" id="submit" style="background-color: rgb(224, 88, 10); border-radius: 7px;font-size: 20px;">
+        Courses list</button>
+      </div>
+      <div id="c"><h1>COURSES</h1></div>
+      <div class="container">
+    <div id="titre">
+    <img id="myimg"src="js.jpg">
+    <div id="texte">
+    <p id="title"></p>
+    <p id="category"></p>
+    <p id="price"></p></div>
+    </div>
+    <div id="titre">
+      <img id="myimg2"src="js.jpg">
+      <div id="texte2">
+      <p id="title2"></p>
+      <p id="category2"></p>
+      <p id="price2"></p></div>
+      </div>
+      <div id="titre">
+        <img id="myimg3"src="js.jpg">
+        <div id="texte3">
+        <p id="title3"></p>
+        <p id="category3"></p>
+        <p id="price3"></p></div>
+        </div>
+      </div>
+      <div>
+        <button id="all">ALL COURSES</button>
+    </div>
+  
+    <script>
+        
+        var courses = [{
+        image: './images/javascriptDef.png',
+        title: 'what is javascript?',
+        category: 'JS',
+        price: 9
+    },
+    {
+        image: './images/htmlBasics.PNG',
+        title: 'basics of HTML',
+        category: 'HTML',
+        price: 5
+    },
+    {
+        image: './images/htmlElements.png',
+        title: 'HTML elements and tags',
+        category: 'HTML',
+        price: 9
+    },
+    {
+        image: './images/cssSelectors.jpg',
+        title: 'CSS selectors',
+        category: 'CSS',
+        price: 69
+    },
+    {
+        image: './images/javascriptVariables.png',
+        title: 'variables and data type of javascript',
+        category: 'JS',
+        price: 19
+    },
+    {
+        image: './images/javascriptOperators.png',
+        title: 'Javascript operators and conditions',
+        category: 'JS',
+        price: 29
+    },
+    {
+        image: './images/htmlAttrVal.jpg',
+        title: 'HTML attributes and values',
+        category: 'HTML',
+        price: 19
+    },
+    {
+        image: './images/cssProperties.png',
+        title: 'CSS properties',
+        category: 'CSS',
+        price: 29
+    },
+    {
+        image: './images/javascriptObjects.png',
+        title: 'Javascript objects and arrays',
+        category: 'JS',
+        price: 39
+    },
+    {
+        image: './images/cssMesures.png',
+        title: 'mesures and unites of CSS',
+        category: 'CSS',
+        price: 19
+    },
+    {
+        image: './images/cssAnimation.png',
+        title: 'CSS animations',
+        category: 'CSS',
+        price: 19
+    },
+    {
+        image: './images/javascriptFunctions.png',
+        title: 'The basics of javascript',
+        category: 'JS',
+        price: 29
+    },
+    {
+        image: './images/javascriptEvents.png',
+        title: 'javascript events',
+        category: 'JS',
+        price: 59
+    },
+    {
+        image: './images/cssColors.png',
+        title: 'css colors',
+        category: 'css',
+        price: 29
+    },
+    {
+        image: './images/phpBasics.png',
+        title: 'getting started with php',
+        category: 'php',
+        price: 15
+    },
+    {
+        image: './images/javascriptFunctions2.png',
+        title: 'functions and loops with javascript',
+        category: 'JS',
+        price: 19
+    },
+    {
+        image: './images/phpDataBase.png',
+        title: 'connecting to database using PHP',
+        category: 'PHP',
+        price: 29
+    },
+    {
+        image: './images/phpCRUD.png',
+        title: 'manipulating crud using php',
+        category: 'php',
+        price: 45
+    },
+    {
+        image: './images/javascriptDOM.png',
+        title: 'DOM the power of javascript',
+        category: 'JS',
+        price: 23
+    },
+    {
+        image: './images/javascriptDOM.png',
+        title: 'DOM the power of javascript',
+        category: 'JS_g4',
+        price: 23
+    },
+    {
+        image: './images/javascriptDOM.png',
+        title: 'groupe 2 ',
+        category: 'groupe2',
+        price: 23
+    }
+]
+var myelements=document.getElementById('myimg');
+var title=document.getElementById('title');
+var category=document.getElementById('category');
+var price=document.getElementById('price');
+function changeimage(myelements,courses){
+  'use strict';
+  setInterval(function(){
+    var myrandom=Math.floor(Math.random()*courses.length);
+    console.log(myrandom);
+   
+    myelements.src=courses[myrandom]['image'];
+    title.innerHTML=courses[myrandom]['title'];
+    category.innerHTML=courses[myrandom]['category'];
+    price.innerHTML=courses[myrandom]['price'];
+
+  },3000);
+}
+changeimage(myelements,courses);
+//la deuxieme div
+var myelements=document.getElementById('myimg2');
+var title2=document.getElementById('title2');
+var category2=document.getElementById('category2');
+var price2=document.getElementById('price2');
+function changeimage2(myelements,courses){
+  'use strict';
+  setInterval(function(){
+    var myrandom=Math.floor(Math.random()*courses.length);
+    console.log(myrandom);
+    myelements.src=courses[myrandom]['image'];
+    title2.innerHTML=courses[myrandom]['title'];
+    category2.innerHTML=courses[myrandom]['category'];
+    price2.innerHTML=courses[myrandom]['price'];
+},3000);
+}
+changeimage2(myelements,courses);
+//3 emee
+var myelements=document.getElementById('myimg3');
+var title3=document.getElementById('title3');
+var category3=document.getElementById('category3');
+var price3=document.getElementById('price3');
+function changeimage3(myelements,courses){
+  'use strict';
+  setInterval(function(){
+    var myrandom=Math.floor(Math.random()*courses.length);
+    console.log(myrandom);
+   
+    myelements.src=courses[myrandom]['image'];
+    title3.innerHTML=courses[myrandom]['title'];
+    category3.innerHTML=courses[myrandom]['category'];
+    price3.innerHTML=courses[myrandom]['price'];
+
+  },3000);
+}
+changeimage3(myelements,courses);
+var home=document.getElementById("home");
+        var courses=document.getElementById("courses");
+        var about=document.getElementById("about");
+        var submit=document.getElementById("submit");
+        var all=document.getElementById("all");
+        home.addEventListener("click",function(){
+          window.location="file:///C:/bootstrap/index.html";
+        })
+        courses.addEventListener("click",function(){
+          window.location="file:///C:/bootstrap/courses.html";
+        })
+        submit.addEventListener("click",function(){
+            window.location="file:///C:/bootstrap/courses.html";
+        })
+        all.addEventListener("click",function(){
+            window.location="file:///C:/bootstrap/courses.html";
+        })
+
+    </script>
+</body>
+</html>
